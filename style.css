@@ -1,0 +1,137 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #E6EFF6;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+.container {
+    width: 85%;
+    margin: 4em auto;
+    display: grid;
+    box-shadow: 5px 5px 15px gray;
+}
+
+.section {
+    padding: 2em 1.6em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: var(--light-gray);
+}
+
+.section__join {
+    background-color: #FFFFFF;
+    color: var(--grayish-blue);
+}
+
+.title {
+    color: var(--light-gray);
+}
+
+.title__join {
+    color: var(--cyan);
+}
+
+.subtitle__join {
+    color: var(--bright-yellow);
+    font-weight: 700;
+}
+
+.paragraph {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.paragraph__join {
+    line-height: 2;
+}
+
+.section__subscription {
+    background-color: var(--cyan)
+}
+
+.price__subscription {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.cuantity__subscription {
+    font-size: 28px;
+}
+
+.type__subscription {
+    opacity: 40%;
+}
+
+.button__subscription {
+    margin-top: 1rem;
+    border: 1px solid;
+    background-color: var(--bright-yellow);
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 10px 10px 15px gray;
+}
+
+.link_subscription {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: .9em;
+}
+
+.section__whyus {
+    background-color: #4ABEBD;
+}
+
+.paragraph__whyus {
+    width: 70%;
+    opacity: 60%;
+    font-family: 'Karla', sans-serif;
+}
+
+/* MEDIA QUERIES */
+
+@media (width > 767px) {
+
+    .container {
+        position: fixed;
+        top: 10%;
+        left: 30%;
+        width: 45%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "join join" "subscription whyus";
+    }
+
+    .section__join {
+        grid-area: join;
+    }
+
+    .paragraph__join {
+        width: 90%;
+    }
+
+    .section__subscription {
+        grid-area: subscription;
+    }
+
+    .button__subscription {}
+
+    .section__whyus {
+        grid-area: whyus;
+    }
+}
